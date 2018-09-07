@@ -9,3 +9,12 @@ service 'apache2' do
   supports status: true
   action [:enable, :start]
 end
+
+file '/var/www/html/hello.html' do
+  content '<html>
+  <body>
+    <h1>hello world</h1>
+  </body>
+</htML>'
+end
+
