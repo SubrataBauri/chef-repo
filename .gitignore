@@ -1,1 +1,3 @@
 .chef
+.kitchen
+cookbooks/.kitchen
