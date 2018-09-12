@@ -15,10 +15,10 @@ service 'apache2' do
   action [:enable, :start]
 end
 
-group 'web_admin'
+group 'web_admin2'
 
-user 'web_admin' do
-  group 'web_admin'
+user 'web_admin2' do
+  group 'web_admin2'
   system true
   shell '/bin/bash'
 end
@@ -26,6 +26,6 @@ end
 template '/var/www/html/hello.html' do
   source 'index.html.erb'
   mode '0644'
-  owner 'web_admin'
-  group 'web_admin'
+  owner 'web_admin2'
+  group 'web_admin2'
 end
